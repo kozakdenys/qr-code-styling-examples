@@ -1,0 +1,14 @@
+<div class="content" role="main">
+  <h2>{{title}}</h2>
+  <div #canvas></div>
+  <label>
+    <input (keyup)="onKey($event)" value={{this.data}}>
+    <select (change)="onChange($event)" value={{this.extension}}>
+      <option value="svg">SVG</option>
+      <option value="png">PNG</option>
+      <option value="jpeg">JPEG</option>
+      <option value="webp">WEBP</option>
+    </select>
+    <button (click)="download()">Download</button>
+  </label>
+</div>
